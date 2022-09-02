@@ -20,7 +20,7 @@
             <div class="flex-none gap-2">
                 <div class="form-control">
 
-                    <input type="text" placeholder="Search" class="input input-bordered" />
+                    <input id="search-field" type="text" placeholder="Search" class="input input-bordered" />
 
                 </div>
                 <div class="dropdown dropdown-end">
@@ -45,12 +45,15 @@
         </div>
     </header>
 
+    <!-- Not Found Massege -->
+    <section id="not-found"></section>
+
     <main>
-        <section>
+        <section class="my-5">
             <!-- menu -->
             <div class="flex">
-                <div class="flex-none">
-                    <ul id="all-menu" class="menu w-56 bg-secondary text-secondary-content p-2 rounded-box">
+                <div class="flex-none mr-5">
+                    <ul id="all-menu" class="menu w-56 bg-accent text-secondary-content p-2 rounded-box ">
                         <!-- <li><a>Item 1</a></li>
                         <li><a>Item 2</a></li>
                         <li><a>Item 3</a></li> -->
@@ -59,13 +62,35 @@
 
 
                 <!-- products -->
-                <div class="grow">
-                    02
+                <div id="product-container" class="grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+
                 </div>
 
             </div>
         </section>
+
+        <!-- Modal -->
+
+        <section>
+
+            <div class="modal" id="my-modal-2">
+                <div id="modal-body" class="modal-box">
+
+                    <!-- <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+                        <p class="py-4">You've been selected for a chance to get one year of subscription to use
+                            Wikipedia
+                            for free!</p> -->
+
+
+
+                </div>
+            </div>
+        </section>
+
+
     </main>
+
 
 
     <script src="js/file.js"></script>
