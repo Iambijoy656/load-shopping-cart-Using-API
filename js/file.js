@@ -31,7 +31,13 @@ setAllmenu();
 
 const searchField = document.getElementById('search-field');
 
+
 searchField.addEventListener('keypress', async (event) => {
+
+    //add spinner
+    const spinner = document.getElementById('spinner');
+    spinner.classList.remove('hidden')
+
 
     if (event.key === 'Enter') {
         // console.log(searchField.value)
@@ -39,6 +45,9 @@ searchField.addEventListener('keypress', async (event) => {
         const searchValue = searchField.value;
         const allProducts = await loadAllProducts();
         // console.log(allProducts);
+
+        spinner.classList.add('hidden')
+
 
 
         //Found product
